@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserModel } from './models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-chat';
+  public currentUser: UserModel = null;
+
+  public get isAuthenticated(): boolean {
+    return this.currentUser && !!this.currentUser.name;
+  }
+
+  public logout(): void {
+    this.currentUser = null;
+  }
+
+  public onAuthenticated(user: UserModel): void {
+    this.currentUser = user;
+  }
 }

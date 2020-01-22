@@ -1,0 +1,22 @@
+<div class="chat">
+  <header class="chat__header">
+    {{ currentUser.name }}
+
+    <button type="button" (click)="logoutUser()">
+      LOGOUT
+    </button>
+  </header>
+
+  <div class="chat__messages">
+    <app-message
+      *ngFor="let message of messages"
+      [message]="message"
+      [currentUser]="currentUser"
+    ></app-message>
+  </div>
+
+  <app-messages-create
+    class="chat__messages-create"
+    (send)="send($event)"
+  ></app-messages-create>
+</div>

@@ -1,0 +1,23 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px 30px;
+}
+
+.chat__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat__messages {
+  flex-grow: 1;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 20px;
+}
+
+.chat__messages-create {
+  flex-shrink: 0;
+}

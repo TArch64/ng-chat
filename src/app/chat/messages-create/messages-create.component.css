@@ -1,0 +1,12 @@
+.messages-create {
+  display: flex;
+}
+
+.messages-create__field {
+  flex-grow: 1;
+}
+
+.messages-create__send {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
